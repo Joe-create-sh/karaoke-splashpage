@@ -1,0 +1,340 @@
+*,
+*::before,
+*::after{
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+    margin:0;
+}
+
+/* =================
+    Typography 
+   ================= */
+
+
+h1 {
+
+    font-size: 2.5rem;
+    font-weight: 400;
+    
+}
+
+.intro{
+
+    font-family: 'Bangers', system-ui;
+    letter-spacing: .1em;
+    text-shadow: 2px 2px 4px black;
+
+}
+
+h2{
+
+    font-size: 2.25rem;
+    margin: 0.167em 0;
+}
+
+.main-content h2{
+
+    font-family: 'Lobster', cursive;
+}
+
+p{
+
+    font-size: 1.125rem;
+    line-height: 1.35;
+
+}
+
+.beta-text,
+.subheading,
+.top-text{
+
+    text-transform: uppercase;
+
+}
+
+.beta-text { 
+    font-weight: 900;
+    
+}
+
+.subheading {
+
+    color: #fff;
+    font-weight: 900;
+    margin-bottom: 0.5em;
+    
+}
+
+.top-text {
+
+    font-size: 0.875rem;
+    font-weight: 900;
+    padding-top: 0.25em;
+    border-top: 5px solid;
+    order:-1;
+    margin: 0 auto;
+}
+
+
+.fine-print {
+
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+
+
+/* =================
+    Flex containers
+   ================= */
+
+.intro,
+.main-content {
+    display: flex;
+    flex-direction: column; 
+    padding-left: 2em;
+    padding-right: 2em;   
+}
+
+/* =================
+    Intro
+   ================= */
+
+
+.intro { 
+   
+    min-height: 250px;
+    justify-content: center;
+    text-align: center;   
+    background: #9480e4 url('images/night-club.png');
+    background-position: 80%;
+    background-size: cover;
+    justify-content: space-between;
+    padding-bottom:1.5em;
+
+}
+
+/* ====================
+    Main content
+   ==================== */
+
+.main-content{
+   
+    align-items: center;
+    background:linear-gradient(95deg, #99a0fa, #020202);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .6);
+    min-height: 100vh;
+    padding-top: 2em;
+       
+}
+
+.intro,
+.main-content{
+
+    color:#fff;
+
+}
+
+.img-main{
+
+    width:140px;
+    
+}
+
+
+/* =================
+    Form
+   ================= */
+
+.btn,
+input{
+
+    width:100%;
+    border-radius: 5px;
+    font-family: inherit;
+
+}
+
+
+/* Base button rule */
+
+.btn{
+  
+    text-transform: uppercase;
+    font-size:1rem;
+    font-weight:900;
+    border:none;
+    padding:1em 0;
+    letter-spacing: .1em;
+    cursor:pointer;
+
+}
+
+.btn-text{
+
+    border-top: 5px solid #4B0082;
+    border-bottom: 5px solid #4B0082;
+
+}
+
+
+/* Modifier button rule */
+
+.btn-primary{
+
+    color:#4B0082;
+    background-color: #00FFFF;
+    margin-top: 1em;
+    transition:background-color 0.4s ease;
+
+}
+
+/* Button pseudo classes */
+
+.btn-primary:hover,
+.btn-primary:focus{
+
+    background-color:#FFD700;
+    color:#8B0000;
+
+}
+
+.btn-primary:hover .btn-text,
+.btn-primary:focus .btn-text{
+
+    border-top: 5px solid #8B0000;
+    border-bottom: 5px solid #8B0000;
+
+}
+
+
+/* Form styles */
+
+input{
+      
+    margin-bottom: 0.75em;
+    padding:0.5em;
+    border:2px solid #fff;
+    color:white;
+    font-weight: 600;
+    letter-spacing: .1em;
+    transition:border-color 0.4s ease, background-color 0.4s ease;
+ 
+}
+
+input[type='text']{
+
+    background-color: #FF69B4;
+    
+}
+
+input[type='email']{
+
+    background-color: #1db207;
+
+}
+
+input[type='email']:focus,
+input[type='email']:hover{
+
+    background-color:#28d917;
+    border:2px solid #0a7a04; 
+
+}
+
+input[type='text']:focus,
+input[type='text']:hover{
+
+    background-color: #FF85C1;
+    border:2px solid #FF69B4;
+
+}
+
+input:focus,
+input:hover{
+
+    outline:none;
+
+}
+
+input::placeholder{
+
+    color:white;
+    font-weight:600;
+    opacity:1;
+
+}
+
+
+.main-content p,
+form{
+
+    max-width:28.125rem;
+
+}
+
+
+
+/* =================
+    Media queries 
+   ================= */
+
+
+@media (min-width:576px){
+
+
+    body{
+
+        display:flex;
+
+    }
+
+    h1{
+
+        font-size: 5vw;
+
+    }
+
+    h2{
+
+        font-size: 2.625rem;
+
+    }
+
+    .beta-text{
+
+        font-size: 1.25rem;
+
+
+    }
+
+    .intro,
+    .main-content{
+
+        flex:1;
+    }
+
+    .intro{
+
+        min-height:100vh;
+    
+    }
+
+    .main-content{
+
+        justify-content: center;
+        padding-top: 0;
+
+    }
+
+}
+
